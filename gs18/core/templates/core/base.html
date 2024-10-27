@@ -7,15 +7,19 @@
     <title>{% block title %}Father {% endblock %}</title>
     <link rel="stylesheet" href="{% static 'core/css/fontAwesome.css' %}">
     <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
-    {% block corecss %}<link rel="stylesheet" href="{% static 'core/css/core.css' %}">
-    {% endblock corecss %}
+    {% comment %} {% block corecss %}<link rel="stylesheet" href="{% static 'core/css/core.css' %}"> {% endcomment %}
+    {% comment %} {% endblock corecss %} {% endcomment %}
 </head>
 <body>
     <nav>
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Django Course</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="{% url 'aboutus' %}">About</a></li>
+            {% comment %} <li><a href="/cor/django">Django Course</a></li> {% endcomment %}
+            <li><a href="{% url 'courseone' %}">Django Course</a></li>
+            {% comment %} <li><a href="{% url 'courseone' as co %}">Django Course</a></li> {% endcomment %}
+
         </ul>
     </nav>
     <button type="button" class="btn btn-primary">Primary</button>
