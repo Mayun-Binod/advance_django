@@ -11,17 +11,7 @@
     {% comment %} {% endblock corecss %} {% endcomment %}
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="{% url 'aboutus' %}">About</a></li>
-            {% comment %} <li><a href="/cor/django">Django Course</a></li> {% endcomment %}
-            <li><a href="{% url 'courseone' %}">Django Course</a></li>
-            {% comment %} <li><a href="{% url 'courseone' as co %}">Django Course</a></li> {% endcomment %}
-
-        </ul>
-    </nav>
+{% include "core/navbar.html" %}
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
     <i class="fa-solid fa-lock"></i>

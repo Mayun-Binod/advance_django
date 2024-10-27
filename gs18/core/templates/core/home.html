@@ -1,5 +1,8 @@
 {% extends "core/base.html" %}
 {% block title %}{{block.super}}Home{% endblock %}
 {% block content %}
-<h2>I am new Home page</h2>
+<h2>I am new Home page {{d}}</h2>
+{% comment %} {% include 'core/topcourse.html' with p='PHP' %} {% endcomment %}
+{% include 'core/topcourse.html' with p='PHP' only %}
+
 {% endblock content %}
